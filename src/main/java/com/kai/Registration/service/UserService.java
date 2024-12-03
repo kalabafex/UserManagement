@@ -24,7 +24,6 @@ public class UserService {
             throw new IllegalStateException("Default role not found");
         }
         user.setPasswordHash(hashPassword(user.getPasswordHash()));
-        user.setIsActive(false);
         return userRepository.save(user);
     }
 
